@@ -1,0 +1,164 @@
+/* ---------- Global Reset ---------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfaf6;
+}
+
+/* ---------- Header ---------- */
+.head {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  height: 100px;
+  padding: 0 30px;
+  background-color: rgb(202, 156, 99);
+  color: white;
+  box-sizing: border-box;
+}
+
+#pic {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+#he {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#li {
+  display: flex;
+  gap: 20px;
+}
+
+#li a {
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+  transition: color 0.3s ease;
+}
+
+#li a:hover {
+  color: #f0e3d3;
+}
+
+/* ---------- Shared Form Styles ---------- */
+.login-form, 
+.reg-form, 
+.work-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 35px;
+  background-color: white;  
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border: 1px solid #d2a368; 
+}
+
+h2 {
+  text-align: center;
+  color: black;  
+  margin-bottom: 25px;
+}
+
+/* ---------- Input Fields ---------- */
+.login-form input[type="email"],
+.login-form input[type="password"],
+.reg-form input[type="email"],
+.reg-form input[type="password"],
+.reg-form input[type="text"],
+.reg-form input[type="tel"],
+.reg-form input[type="address"],
+.work-form input[type="text"],
+.work-form input[type="email"],
+.work-form select,
+.work-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #d2a368;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fff8f1;
+  color: black;
+  box-sizing: border-box;
+}
+
+input::placeholder, 
+textarea::placeholder {
+  color: #a67b4e;
+}
+
+/* ---------- Textarea ---------- */
+.work-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* ---------- Buttons ---------- */
+#but, 
+.login-form button,
+.work-form button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #d2a368;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+#but:hover, 
+.login-form button:hover,
+.work-form button:hover {
+  background-color: #bb8c4d;
+}
+
+/* ---------- Links ---------- */
+.links {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.links a {
+  color: #d2a368;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+.alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.alert.success { background: #28a745; }
+.alert.error { background: #dc3545; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

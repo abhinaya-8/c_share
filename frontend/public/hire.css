@@ -1,0 +1,21 @@
+.hire-form {
+  width: 100%;
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 35px;
+  background-color: white;  
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #d2a368;
+  text-align: center;
+}
+.hire-form select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #d2a368;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fff8f1;
+  color: black;
+}

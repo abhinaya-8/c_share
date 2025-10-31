@@ -1,0 +1,330 @@
+/* General Body and Page Layout */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+.head {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+    background-color:rgb(202, 156, 99);
+    color: white;
+    box-sizing: border-box;
+}
+
+#pic {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#he {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#li {
+    display: flex;
+    gap: 20px;
+}
+
+#li a {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+
+#li a:hover {
+    color: #f01010;
+}
+
+/* Search suggestions */
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+#search-box {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    outline: none;
+}
+
+#suggestions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    display: none;
+    z-index: 1000;
+    color: black;
+}
+
+#suggestions li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#suggestions li:hover,
+#suggestions li.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Page content */
+.page-content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff8f1;
+    color: #4a2e10;
+    border: 1px solid #d2a368;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.page-content h2 {
+    color: #7a4e19;
+    margin-bottom: 20px;
+}
+
+.page-content ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Role Grid */
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 40px;
+    justify-items: center;
+}
+
+.role-card {
+    width: 220px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    background: #fff;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.role-card:hover {
+    background: #f3f3f3;
+    transform: scale(1.05);
+}
+
+.role-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* --- Consolidated Modal and Form Styling --- */
+
+.modal {
+    display: none; /* Crucial: This hides the modal by default */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex; /* Centers the modal content */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-btn {
+    color: #888;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.modal-content h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Form layout with flexbox for proper alignment and spacing */
+#bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds consistent vertical spacing between form groups */
+}
+
+.form-group {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between labels and inputs */
+}
+
+.form-group h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Form Inputs and Labels */
+label {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9em;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0; /* Removed this margin to use flexbox gap */
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Worker List Display */
+#workersList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.worker-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: left;
+}
+
+.worker-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.worker-card p {
+    margin: 6px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.worker-card strong {
+    font-size: 16px;
+    color: #222;
+}
+
+.booking-card {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+
+.status-pending {
+    color: orange;
+    font-weight: bold;
+}
+
+.status-canceled {
+    color: red;
+    font-weight: bold;
+}
