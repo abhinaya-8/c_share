@@ -45,6 +45,7 @@ Logo & Title
 .logo-title {
 display: flex;
 align-items: center;
+color: white;
 }
 
 #pic {
@@ -75,26 +76,9 @@ font-size: larger;
 transition: color 0.3s ease;
 }
 
-#li a:hover {
-color: red;
-}
 
-/* ===========================
-Search Bar
-=========================== */
-.search-container {
-position: relative;
-display: inline-block;
-}
 
-#search-box {
-width: 200px;
-padding: 8px;
-font-size: 16px;
-border-radius: 6px;
-border: 1px solid #333;
-outline: none;
-}
+
 
 /* ===========================
 Page Content

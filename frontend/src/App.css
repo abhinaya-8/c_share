@@ -12,10 +12,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em white);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em );
 }
 
 @keyframes logo-spin {
@@ -90,3 +90,11 @@
   border-radius: 4px;
 }
 
+#logout-link {
+  color: white;
+  text-decoration: none;
+}
+
+#logout-link:hover {
+  color: #f8e3c3; /* light beige hover color to match your brown theme */
+}
