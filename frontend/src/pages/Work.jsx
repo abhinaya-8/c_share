@@ -19,7 +19,7 @@ const Work = () => {
       experience: document.getElementById('experience').value,
     };
     try {
-      const res = await fetch('/api/workers/details', {
+      const res = await fetch('https://c-share.onrender.com/api/workers/details', {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data)
       });
       const result = await res.json();
