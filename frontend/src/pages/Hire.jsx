@@ -84,7 +84,7 @@ const Hire = () => {
     setDetailsOpen(true);
     setLoadingWorkers(true);
     try {
-      const res = await fetch(`/api/workers/by-job/${encodeURIComponent(role)}`);
+      const res = await fetch(`https://c-share.onrender.com/api/workers/by-job/${encodeURIComponent(role)}`);
       if (!res.ok) throw new Error("Failed to fetch");
       const data = await res.json();
       setWorkers(Array.isArray(data) ? data : []);
@@ -127,7 +127,7 @@ const Hire = () => {
     e.preventDefault();
     if (!bookingWorker) return alert('No worker selected');
     try {
-      const res = await fetch('/api/bookings/book', {
+      const res = await fetch('https://c-share.onrender.com/api/bookings/book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
